@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">اتوماسیون کوره چوب خشک کنی</string>
+    <string name="temp_button">کنترل عملگرها</string>
+    <string name="tempreture">دمای محیط</string>
+    <string name="moist1">رطوبت محیط</string>
+    <string name="moist2">رطوبت چوب(وزن)</string>
+    <string name="weight">وزن</string>
+    <string name="param1">رطوبت چوب(پارامتر ۱)</string>
+    <string name="param2">رطوبت چوب(پارامتر ۲)</string>
+    <string name="hitter">دمنده هوا</string>
+    <string name="fan">مکنده هوا</string>
+    <string name="cooler">رطوبت‌ساز هوا</string>
+    <string name="phone_input">ثبت شماره تلفن</string>
+    <string name="operations">کنترل عملگر ها</string>
+    <string name="phn_msg">شماره تلفن ثبت نشده است</string>
+    <string name="phn_code_tv">+98</string>
+    <string name="request_blower_title">فعال کردن دمنده</string>
+    <string name="request_sucker_title">فعال کردن مکنده</string>
+    <string name="request_humidifier_title">فعال کردن رطوبت ساز</string>
+    <string name="phn_num_submit">ثبت</string>
+    <string name="date_title">تاریخ _</string>
+    <string name="phn_num_inp_hint">9120000000</string>
+    <string name="machines_state">وضعیت عملگر‌های کوره</string>
+    <string name="check_button">استعلام</string>
+    <string name="daily_graph">دمای لحظه‌ای</string>
+    <string name="long_graph">دمای دوره‌ای</string>
+</resources>

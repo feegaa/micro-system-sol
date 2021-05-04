@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_activity_bg"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/temperature_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:padding="4dp"
+        app:constraint_referenced_ids="temperature,temperature_value"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/env_moist_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:padding="4dp"
+        app:constraint_referenced_ids="env_moist,env_moist_value"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/wood_moist_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:padding="4dp"
+        app:constraint_referenced_ids="wood_moist,wood_moist_value"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/param1_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:padding="4dp"
+        app:constraint_referenced_ids="param1, param1_value"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/param2_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:padding="4dp"
+        app:constraint_referenced_ids="param2, param2_value"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/detail_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/row_layer_bg"
+        android:foregroundGravity="center"
+        android:padding="10dp"
+        app:constraint_referenced_ids="temperature_layer,
+                                        env_moist_layer,
+                                        wood_moist_layer,
+                                        param1_layer,
+                                        param2_layer"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/air_blower_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:constraint_referenced_ids="air_blower_tv, air_blower_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/air_sucker_layer" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/air_sucker_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:constraint_referenced_ids="air_sucker_tv, air_sucker_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/system_title"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/air_humidifier_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:constraint_referenced_ids="air_humidifier_tv, air_humidifier_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/air_blower_layer"/>
+
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/state_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/row_layer_bg"
+        android:padding="10dp"
+        app:constraint_referenced_ids="system_title,
+                                        air_blower_layer,
+                                        air_sucker_layer,
+                                        air_humidifier_layer"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/param2"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/param2"
+        android:textColor="@color/white"
+        android:background="@drawable/item_title_bg"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="12dp"
+        android:paddingVertical="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/param2_value"
+        app:layout_constraintTop_toBottomOf="@+id/param1" />
+
+    <TextView
+        android:id="@+id/param2_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:background="@drawable/item_layer"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/param2"
+        app:layout_constraintHorizontal_bias="0.240"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/param2" />
+
+
+
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/tempreture"
+        android:textSize="12dp"
+        android:background="@drawable/item_title_bg"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/temperature_value"
+        app:layout_constraintTop_toTopOf="@+id/detail_layer" />
+
+    <TextView
+        android:id="@+id/temperature_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="0&#xb0;"
+        android:textSize="12dp"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/item_layer"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temperature" />
+
+
+    <TextView
+        android:id="@+id/env_moist"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/moist1"
+        android:background="@drawable/item_title_bg"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/env_moist_value"
+        app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+
+    <TextView
+        android:id="@+id/env_moist_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/item_layer"
+        app:layout_constraintEnd_toStartOf="@+id/env_moist"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/env_moist" />
+
+    <TextView
+        android:id="@+id/wood_moist"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/moist2"
+        android:background="@drawable/item_title_bg"
+        android:paddingVertical="4dp"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wood_moist_value"
+        app:layout_constraintTop_toBottomOf="@+id/env_moist" />
+
+
+    <TextView
+        android:id="@+id/param1"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/param1"
+        android:textSize="12dp"
+        android:background="@drawable/item_title_bg"
+        android:paddingVertical="4dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/param1_value"
+        app:layout_constraintTop_toBottomOf="@+id/wood_moist" />
+
+
+    <TextView
+        android:id="@+id/air_blower_tv"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingVertical="4dp"
+        android:textAlignment="center"
+        android:text="@string/hitter"
+        android:textSize="12sp"
+        android:background="@drawable/item_title_bg"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/air_blower_iv"
+        app:layout_constraintTop_toBottomOf="@+id/air_sucker_tv" />
+
+    <TextView
+        android:id="@+id/wood_moist_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/item_layer"
+        app:layout_constraintEnd_toStartOf="@+id/wood_moist"
+        app:layout_constraintHorizontal_bias="0.240"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wood_moist" />
+
+    <TextView
+        android:id="@+id/air_sucker_tv"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:paddingVertical="4dp"
+        android:text="@string/fan"
+        android:background="@drawable/item_title_bg"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/air_sucker_iv"
+        app:layout_constraintTop_toBottomOf="@+id/system_title" />
+
+    <TextView
+        android:id="@+id/param1_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="@drawable/item_layer"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/param1"
+        app:layout_constraintHorizontal_bias="0.240"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/param1" />
+
+    <TextView
+        android:id="@+id/system_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/machines_state"
+        android:textColor="#eee"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_layer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+    <TextView
+        android:id="@+id/air_humidifier_tv"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:text="@string/cooler"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:background="@drawable/item_title_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/air_humidifier_iv"
+        app:layout_constraintTop_toBottomOf="@+id/air_blower_tv" />
+
+
+    <ImageView
+        android:id="@+id/air_sucker_iv"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/air_sucker_tv"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/system_title"
+        app:srcCompat="@drawable/not_set" />
+
+    <ImageView
+        android:id="@+id/air_blower_iv"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintEnd_toStartOf="@+id/air_blower_tv"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/air_blower_tv"
+        app:srcCompat="@drawable/not_set" />
+
+
+    <ImageView
+        android:id="@+id/air_humidifier_iv"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintEnd_toStartOf="@+id/air_humidifier_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/air_humidifier_tv"
+        app:srcCompat="@drawable/not_set" />
+
+
+    <Button
+        android:id="@+id/periodic_graph"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/check_button"
+        android:paddingVertical="8dp"
+        android:text="@string/daily_graph"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/instant_temp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/instant_temp"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/check_button"
+        android:paddingVertical="8dp"
+        android:text="@string/long_graph"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/periodic_graph"
+        app:layout_constraintEnd_toStartOf="@id/check_request" />
+
+    <Button
+        android:id="@+id/check_request"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/check_button"
+        android:paddingVertical="8dp"
+        android:text="@string/check_button"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/instant_temp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
