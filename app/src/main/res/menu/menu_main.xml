@@ -7,4 +7,7 @@
         android:id="@+id/phone_input_item"
         android:icon="@android:drawable/stat_sys_phone_call"
         android:title="@string/phone_input" />
+    <item
+        android:id="@+id/alarm_item"
+        android:title="@string/alarm_item" />
 </menu>

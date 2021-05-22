@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
@@ -35,13 +36,36 @@ public class MyReceiver extends BroadcastReceiver {
                     msg = smsMessages[i].getMessageBody();
                     phoneNumber = smsMessages[i].getOriginatingAddress();
                 }
-                Toast.makeText(context,
-                        "RECEIVED",
-                        Toast.LENGTH_LONG).show();
+                abortBroadcast();
+
+                SharedPreferences sharedPref = context.getSharedPreferences("SP", 0);
+                String saved_phn_num = sharedPref.getString("phone_number", "");
+
+                if (phoneNumber.equals(saved_phn_num)) {
+                    abortBroadcast();
+
+                    Toast.makeText(context,
+                            phoneNumber + "\nmy phn: "+ saved_phn_num,
+                            Toast.LENGTH_LONG).show();
+                }
+
+
                 MainActivity.getInstance().msgReceived(msg, phoneNumber);
             }
         }
     }
+//
+//    public boolean deleteSms(String smsId) {
+//        boolean isSmsDeleted = false;
+//        try {
+//            mActivity.getContentResolver().delete(Uri.parse("content://sms/" + smsId), null, null);
+//            isSmsDeleted = true;
+//
+//        } catch (Exception ex) {
+//            isSmsDeleted = false;
+//        }
+//        return isSmsDeleted;
+//    }
 
     public static String getMsg() {
         return msg;

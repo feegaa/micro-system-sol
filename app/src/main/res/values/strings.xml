@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">اتوماسیون کوره چوب خشک کنی</string>
+    <string name="phone_input">ثبت شماره تلفن</string>
+    <string name="alarm_item">هشدار</string>
+    <string name="history_activity">تاریخچه</string>
     <string name="temp_button">کنترل عملگرها</string>
-    <string name="tempreture">دمای محیط</string>
+    <string name="instant_graph_activity">گراف لحظه‌ای</string>
+    <string name="periodic_graph_activity">گراف دوره‌ای</string>
+    <string name="temperature">دمای محیط</string>
     <string name="moist1">رطوبت محیط</string>
     <string name="moist2">رطوبت چوب(وزن)</string>
     <string name="weight">وزن</string>
@@ -10,7 +15,6 @@
     <string name="hitter">دمنده هوا</string>
     <string name="fan">مکنده هوا</string>
     <string name="cooler">رطوبت‌ساز هوا</string>
-    <string name="phone_input">ثبت شماره تلفن</string>
     <string name="operations">کنترل عملگر ها</string>
     <string name="phn_msg">شماره تلفن ثبت نشده است</string>
     <string name="phn_code_tv">+98</string>
